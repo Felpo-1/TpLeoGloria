@@ -1,7 +1,7 @@
 package br.edu.infnet.guilda.aventura.controller;
 
 import br.edu.infnet.guilda.aventura.domain.Aventureiro;
-import br.edu.infnet.guilda.aventura.domain.ClasseAventureiro;
+import br.edu.infnet.guilda.aventura.domain.enums.ClasseAventureiro;
 import br.edu.infnet.guilda.aventura.dto.AventureiroRequestDTO;
 import br.edu.infnet.guilda.aventura.service.AventureiroService;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -5,7 +5,7 @@ import br.edu.infnet.guilda.audit.domain.Usuario;
 import br.edu.infnet.guilda.audit.repository.OrganizacaoRepository;
 import br.edu.infnet.guilda.audit.repository.UsuarioRepository;
 import br.edu.infnet.guilda.aventura.domain.Aventureiro;
-import br.edu.infnet.guilda.aventura.domain.ClasseAventureiro;
+import br.edu.infnet.guilda.aventura.domain.enums.ClasseAventureiro;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

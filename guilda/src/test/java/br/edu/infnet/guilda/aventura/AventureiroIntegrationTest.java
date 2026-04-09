@@ -5,7 +5,7 @@ import br.edu.infnet.guilda.audit.domain.Usuario;
 import br.edu.infnet.guilda.audit.repository.OrganizacaoRepository;
 import br.edu.infnet.guilda.audit.repository.UsuarioRepository;
 import br.edu.infnet.guilda.aventura.domain.Aventureiro;
-import br.edu.infnet.guilda.aventura.domain.ClasseAventureiro;
+import br.edu.infnet.guilda.aventura.domain.enums.ClasseAventureiro;
 import br.edu.infnet.guilda.aventura.dto.AventureiroRequestDTO;
 import br.edu.infnet.guilda.aventura.repository.AventureiroRepository;
 import br.edu.infnet.guilda.aventura.repository.LogAventuraRepository;
@@ -18,7 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-@ActiveProfiles("test") // Assuming properties will be mocked or test properties provided.
+@ActiveProfiles("test") 
 public class AventureiroIntegrationTest {
 
     @Autowired
@@ -44,7 +44,7 @@ public class AventureiroIntegrationTest {
         aventureiroRepository.deleteAll();
         usuarioRepository.deleteAll();
         organizacaoRepository.deleteAll();
-        logAventuraRepository.deleteAll(); // Limpa as entidades Mongo caso levante o container
+        logAventuraRepository.deleteAll(); 
 
         org = organizacaoRepository.save(Organizacao.builder()
                 .nome("Guilda Central")
@@ -74,7 +74,7 @@ public class AventureiroIntegrationTest {
         Assertions.assertNotNull(saved.getId());
         Assertions.assertEquals("Aragorn", saved.getNome());
 
-        // Testar se o LogAventura foi salvo via Service no Mongo (apesar de eventual assincronicidade)
+        
         Assertions.assertTrue(logAventuraRepository.count() > 0 || logAventuraRepository.count() == 0, "Validação de resiliência ao Mongo");
     }
 }

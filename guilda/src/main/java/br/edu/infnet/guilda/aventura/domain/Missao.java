@@ -3,6 +3,8 @@ package br.edu.infnet.guilda.aventura.domain;
 import br.edu.infnet.guilda.audit.domain.Organizacao;
 import jakarta.persistence.*;
 import lombok.*;
+import br.edu.infnet.guilda.aventura.domain.enums.NivelPerigoMissao;
+import br.edu.infnet.guilda.aventura.domain.enums.StatusMissao;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,11 +25,13 @@ public class Missao {
     @Column(nullable = false, length = 150)
     private String titulo;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "nivel_perigo", nullable = false, length = 20)
-    private String nivelPerigo;
+    private NivelPerigoMissao nivelPerigo;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private String status;
+    private StatusMissao status;
 
     @Column(name = "data_criacao", nullable = false, updatable = false)
     private LocalDateTime dataCriacao;

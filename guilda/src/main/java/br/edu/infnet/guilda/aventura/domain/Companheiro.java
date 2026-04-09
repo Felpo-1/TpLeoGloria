@@ -2,11 +2,14 @@ package br.edu.infnet.guilda.aventura.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import br.edu.infnet.guilda.aventura.domain.enums.EspecieCompanheiro;
+
+import java.io.Serializable;
 
 @Entity
 @Table(name = "companheiro", schema = "aventura")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
-public class Companheiro {
+public class Companheiro implements Serializable {
 
     @Id
     private Long id;

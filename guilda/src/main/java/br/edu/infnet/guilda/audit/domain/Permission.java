@@ -3,10 +3,12 @@ package br.edu.infnet.guilda.audit.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "permissions", schema = "audit")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
-public class Permission {
+public class Permission implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

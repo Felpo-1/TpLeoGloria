@@ -1,6 +1,6 @@
 package br.edu.infnet.guilda.aventura.dto;
 
-import br.edu.infnet.guilda.aventura.domain.EspecieCompanheiro;
+import br.edu.infnet.guilda.aventura.domain.enums.EspecieCompanheiro;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

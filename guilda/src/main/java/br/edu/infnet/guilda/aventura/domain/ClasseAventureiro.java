@@ -1,9 +1,4 @@
 package br.edu.infnet.guilda.aventura.domain;
 
-public enum ClasseAventureiro {
-    GUERREIRO,
-    MAGO,
-    ARQUEIRO,
-    CLERIGO,
-    LADINO
-}
+// Migrado para br.edu.infnet.guilda.aventura.domain.enums
+

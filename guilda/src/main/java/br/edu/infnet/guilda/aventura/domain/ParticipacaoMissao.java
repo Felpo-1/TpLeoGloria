@@ -2,6 +2,7 @@ package br.edu.infnet.guilda.aventura.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import br.edu.infnet.guilda.aventura.domain.enums.PapelAventureiro;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -24,8 +25,9 @@ public class ParticipacaoMissao {
     @JoinColumn(name = "aventureiro_id")
     private Aventureiro aventureiro;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 40)
-    private String papel;
+    private PapelAventureiro papel;
 
     @Column(name = "recompensa_ouro")
     private BigDecimal recompensaOuro;

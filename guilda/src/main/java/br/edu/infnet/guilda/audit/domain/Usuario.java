@@ -2,13 +2,14 @@ package br.edu.infnet.guilda.audit.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.io.Serializable;
 import java.time.OffsetDateTime;
 import java.util.Set;
 
 @Entity
 @Table(name = "usuarios", schema = "audit")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
-public class Usuario {
+public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

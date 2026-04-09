@@ -4,13 +4,15 @@ import br.edu.infnet.guilda.audit.domain.Organizacao;
 import br.edu.infnet.guilda.audit.domain.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
+import br.edu.infnet.guilda.aventura.domain.enums.ClasseAventureiro;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "aventureiro", schema = "aventura")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
-public class Aventureiro {
+public class Aventureiro implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

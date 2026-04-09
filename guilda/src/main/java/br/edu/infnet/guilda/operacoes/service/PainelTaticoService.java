@@ -18,11 +18,7 @@ public class PainelTaticoService {
 
     private final PainelTaticoMissaoRepository repository;
 
-    /**
-     * Retorna as top 10 missões com atualização nos últimos 15 dias, 
-     * ordenadas por índice de prontidão decrescente.
-     * Resultado é cacheadot para diminuir a carga no banco de dados.
-     */
+
     @Cacheable(value = "topMissoesCache", key = "'top10_15dias'")
     public List<PainelTaticoMissao> getTop10MissoesTaticasUltimos15Dias() {
         log.info("Executando consulta pesada no banco de dados: Top 10 Missões Táticas (últimos 15 dias)");
