@@ -19,7 +19,6 @@ public class ProdutoService {
     private final ElasticsearchOperations elasticsearchOperations;
     private final co.elastic.clients.elasticsearch.ElasticsearchClient elasticsearchClient;
 
-    // --- Buscas Textuais ---
 
     public List<Produto> buscarPorNome(String termo) {
         NativeQuery query = NativeQuery.builder()
@@ -56,7 +55,6 @@ public class ProdutoService {
         return executarBusca(query);
     }
 
-    // --- Buscas com Filtros ---
 
     public List<Produto> buscarComFiltroCategoria(String termo, String categoria) {
         NativeQuery query = NativeQuery.builder()
@@ -86,7 +84,6 @@ public class ProdutoService {
         return executarBusca(query);
     }
 
-    // --- Agregações ---
 
     public Map<String, Long> quantidadePorCategoria() throws java.io.IOException {
         Map<String, Long> map = new HashMap<>();

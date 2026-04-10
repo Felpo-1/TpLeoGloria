@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "vw_painel_tatico_missao", schema = "operacoes")
-@Immutable // Apenas para leitura
+@Immutable 
 @Getter
 public class PainelTaticoMissao {
 
